@@ -1,6 +1,6 @@
 # mavlink_msg
 
-A ROS 2 message package for exposing MAVLink-derived telemetry on ROS topics. This package is intended for use with systems that bridge MAVLink data into ROS, including py_mavlink-based pipelines and custom ROS nodes that need standard message definitions for sensor and state data.
+A ROS 2 message package for exposing MAVLink-derived telemetry on ROS topics. This package is intended for use with systems that bridge MAVLink data into ROS, including py_mavlink-based pipelines and custom ROS nodes that need standard message definitions for sensor and state data (For example, the py_mavlink package https://github.com/GRAAL-Lab/py_mavlink). 
 
 ## Overview
 
