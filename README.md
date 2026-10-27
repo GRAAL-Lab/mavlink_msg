@@ -13,20 +13,6 @@ This package contains the following message definitions:
 - `IMU.msg` — accelerometer, gyroscope, magnetometer, and temperature data
 - `Pressure.msg` — absolute and differential pressure readings with temperature data
 
-## Package structure
-
-```text
-mavlink_msg/
-├── CMakeLists.txt
-├── LICENSE
-├── package.xml
-├── README.md
-└── msg/
-    ├── Attitude.msg
-    ├── BatteryStatus.msg
-    ├── IMU.msg
-    └── Pressure.msg
-```
 
 ## Dependencies
 
@@ -50,17 +36,6 @@ colcon build --packages-select mavlink_msg
 source install/setup.bash
 ```
 
-## Generated message types
-
-After building, the following interfaces will be available:
-
-```bash
-ros2 interface show mavlink_msg/Attitude
-ros2 interface show mavlink_msg/BatteryStatus
-ros2 interface show mavlink_msg/IMU
-ros2 interface show mavlink_msg/Pressure
-```
-
 ## Typical usage
 
 This package is intended to be used as a message schema layer between MAVLink data and ROS. In a typical setup, a node or bridge (for example, a py_mavlink-based converter) parses MAVLink packets and publishes the corresponding ROS messages on topics such as:
@@ -76,7 +51,7 @@ The generated message definitions are compatible with standard ROS tooling, incl
 
 - This package is a message-only ROS package; it does not implement MAVLink parsing by itself.
 - It is best used together with a MAVLink-to-ROS conversion node or custom bridge.
-- The package is designed for integration into ROS 2 systems where telemetry is published on topics for downstream processing.
+- The package is designed for integration into ROS 2 systems https://github.com/GRAAL-Lab/py_mavlink  where telemetry is published on topics for downstream processing.
 
 ## License
 
